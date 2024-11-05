@@ -1,19 +1,15 @@
-"use client";
+import Header from '../components/Header';
+import Footer from '../components/Footer';
 
-import Link from 'next/link';
-
-export default function Home() {
+export default function HomePage() {
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-white">
-      <h1 className="text-4xl font-bold text-blue-600">Welcome to Inventory Management</h1>
-      <div className="mt-6 space-x-4">
-        <Link href="/login" className="px-6 py-2 text-white bg-blue-500 rounded hover:bg-blue-600">
-          Login
-        </Link>
-        <Link href="/register" className="px-6 py-2 text-blue-600 border border-blue-600 rounded hover:bg-blue-50">
-          Register
-        </Link>
-      </div>
+    <div className="flex flex-col min-h-screen items-center justify-center">
+      <Header />
+      <main className="text-center py-12">
+        <h1 className="text-5xl font-bold text-primary mb-4">Welcome to Your Inventory System</h1>
+        <p className="text-lg text-gray-600">Effortlessly manage and track your inventory.</p>
+      </main>
+      <Footer />
     </div>
   );
 }

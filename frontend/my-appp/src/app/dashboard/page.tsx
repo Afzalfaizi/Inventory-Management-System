@@ -1,12 +1,20 @@
-"use client";
+import Card from '../../components/Card';
+import Overview from '@/components/Overview';
 
-import InventoryList from '../../components/InventoryList';
-
-export default function Dashboard() {
+export default function DashboardPage() {
   return (
-    <div className="min-h-screen bg-gray-100">
-      <h1 className="text-4xl font-bold text-blue-600">Inventory Dashboard</h1>
-      <InventoryList />
+    <div className="grid gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+      <Card>
+        <Overview />
+      </Card>
+      <Card>
+        <h3 className="text-lg font-semibold text-primary">Inventory Stats</h3>
+        <p className="text-gray-700">Overview of your inventory items.</p>
+      </Card>
+      <Card>
+        <h3 className="text-lg font-semibold text-primary">Recent Activity</h3>
+        <p className="text-gray-700">Track recent updates and actions.</p>
+      </Card>
     </div>
   );
 }
