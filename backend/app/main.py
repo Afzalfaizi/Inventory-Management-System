@@ -6,7 +6,7 @@ app = FastAPI()
 
 @app.get("/")
 def read_root():
-    return {"message": "Welcome to Inventory Management System"}
+    return {"message": "Welcome to Mart Inventory Management System"}
 
 
 init_db()
