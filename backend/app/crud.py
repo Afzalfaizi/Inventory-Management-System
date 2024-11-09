@@ -3,6 +3,8 @@ from .models import User
 from typing import Optional
 from . import models
 
+
+# User CRUD operations
 def create_user(db: Session, username: str, email: str, password: str):
     user = User(username=username, email=email)
     user.set_password(password)
